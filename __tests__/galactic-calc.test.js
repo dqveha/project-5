@@ -111,8 +111,3 @@ describe('GalacticAges', () => {
     expect(olderAges.earthExpectancy).toEqual(49);
   })
 });
-  
-
-
-  
-//I followed along with the Red, Green, Refactor workflow on https://www.learnhowtoprogram.com/intermediate-javascript/test-driven-development-and-environments-with-javascript/red-green-refactor-workflow; however, I think there's a discrepancy where I was suppose to commit a test before writing the corresponding method. I will admit now that I did not do that. I committed once I saw that my previous and current test passed per step 8.

@@ -16,6 +16,7 @@ describe('GalacticAges', () => {
     expect(ages.mercuryAge).toEqual("");
     expect(ages.venusAge).toEqual("");
     expect(ages.marsAge).toEqual("");
+    expect(ages.jupiterAge).toEqual("");
   });
   
   
@@ -35,6 +36,12 @@ describe('GalacticAges', () => {
     ages.dateOfBirthCalc();
     ages.venusAgeCalc();
     expect(ages.venusAge).toEqual(18);
+  });
+
+  test('should calculate and return age in Mars years', () => {
+    ages.dateOfBirthCalc();
+    ages.marsAgeCalc();
+    expect(ages.marsAge).toEqual(56);
   });
 });
   

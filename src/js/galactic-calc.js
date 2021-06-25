@@ -7,6 +7,7 @@ export default class GalacticAges {
     this.mercuryAge = "";
     this.venusAge = "";
     this.marsAge = "";
+    this.jupiterAge = "";
   }
 
   dateOfBirthCalc() {
@@ -25,5 +26,9 @@ export default class GalacticAges {
 
   venusAgeCalc() {
     this.venusAge = Math.floor(this.earthAge * 0.62)
+  }
+
+  marsAgeCalc() {
+    this.marsAge = Math.floor(this.earthAge * 1.88)
   }
 }

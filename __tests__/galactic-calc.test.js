@@ -54,6 +54,13 @@ describe('GalacticAges', () => {
     ages.lifeExpectancy();
     expect(ages.earthExpectancy).toEqual(42);
   })
+
+  test('should return life expectancy in Earth', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    ages.lifeExpectancy();
+    expect(ages.mercuryExpectancy).toEqual(10);
+  })
 });
   
 

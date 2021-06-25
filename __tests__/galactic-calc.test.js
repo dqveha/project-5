@@ -48,18 +48,25 @@ describe('GalacticAges', () => {
     expect(ages.jupiterAge).toEqual(355);
   });
 
-  test('should return life expectancy in Earth', () => {
+  test('should return life expectancy on Earth', () => {
     ages.dateOfBirthCalc();
     ages.galacticAgeCalc();
     ages.lifeExpectancy();
     expect(ages.earthExpectancy).toEqual(42);
   })
 
-  test('should return life expectancy in Earth', () => {
+  test('should return life expectancy on Mercury', () => {
     ages.dateOfBirthCalc();
     ages.galacticAgeCalc();
     ages.lifeExpectancy();
     expect(ages.mercuryExpectancy).toEqual(10);
+  })
+
+  test('should return life expectancy on Venus', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    ages.lifeExpectancy();
+    expect(ages.venusExpectancy).toEqual(26);
   })
 });
   

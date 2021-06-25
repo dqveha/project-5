@@ -19,8 +19,6 @@ describe('GalacticAges', () => {
     expect(ages.jupiterAge).toEqual("");
   });
   
-  
-
   test('should calculate and return the year after calculating difference of month and day from present time', () => {
     ages.dateOfBirthCalc()
     expect(ages.earthAge).toEqual(30);
@@ -28,20 +26,26 @@ describe('GalacticAges', () => {
 
   test('should calculate and return age in Mercury years', () => {
     ages.dateOfBirthCalc();
-    ages.mercuryAgeCalc();
+    ages.galacticAgeCalc();
     expect(ages.mercuryAge).toEqual(7);
   });
 
   test('should calculate and return age in Venus years', () => {
     ages.dateOfBirthCalc();
-    ages.venusAgeCalc();
+    ages.galacticAgeCalc();
     expect(ages.venusAge).toEqual(18);
   });
 
   test('should calculate and return age in Mars years', () => {
     ages.dateOfBirthCalc();
-    ages.marsAgeCalc();
+    ages.galacticAgeCalc();
     expect(ages.marsAge).toEqual(56);
+  });
+
+  test('should calculate and return age in Jupiter years', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    expect(ages.jupiterAge).toEqual(355);
   });
 });
   

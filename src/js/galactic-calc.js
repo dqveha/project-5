@@ -8,6 +8,10 @@ export default class GalacticAges {
     this.venusAge = "";
     this.marsAge = "";
     this.jupiterAge = "";
+    this.mercuryUnit = 0.24;
+    this.venusUnit = 0.62;
+    this.marsUnit = 1.88;
+    this.jupiterUnit = 11.86;
   }
 
   dateOfBirthCalc() {
@@ -20,15 +24,16 @@ export default class GalacticAges {
     this.earthAge = ageYear;
   }
 
-  mercuryAgeCalc() {
-    this.mercuryAge = Math.floor(this.earthAge * 0.24)
-  }
-
-  venusAgeCalc() {
-    this.venusAge = Math.floor(this.earthAge * 0.62)
-  }
-
-  marsAgeCalc() {
-    this.marsAge = Math.floor(this.earthAge * 1.88)
+  galacticAgeCalc() {
+    this.mercuryAge = Math.floor(this.earthAge * this.mercuryUnit);
+    this.venusAge = Math.floor(this.earthAge * this.venusUnit);
+    this.marsAge = Math.floor(this.earthAge * this.marsUnit);
+    this.jupiterAge = Math.floor(this.earthAge * this.jupiterUnit);
   }
 }
+
+
+  // lifeExpectancy() {
+  //   const averageExpectancy = 72;
+
+  // }

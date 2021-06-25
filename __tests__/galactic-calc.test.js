@@ -17,8 +17,21 @@ describe('GalacticAges', () => {
     expect(ages.venusAge).toEqual("");
     expect(ages.marsAge).toEqual("");
     expect(ages.jupiterAge).toEqual("");
+    expect(ages.earthExpectancy).toEqual("");
+    expect(ages.mercuryExpectancy).toEqual("");
+    expect(ages.venusExpectancy).toEqual("");
+    expect(ages.marsExpectancy).toEqual("");
+    expect(ages.jupiterExpectancy).toEqual("");
+    expect(ages.mercuryUnit).toEqual(0.24);
+    expect(ages.venusUnit).toEqual(0.62);
+    expect(ages.marsUnit).toEqual(1.88);
+    expect(ages.jupiterUnit).toEqual(11.86);
   });
   
+  test.skip('should calculate and return the difference of this year and birthdate year', () => {
+    expect(ages.dateOfBirthCalc()).toEqual(31);
+  });
+
   test('should calculate and return the year after calculating difference of month and day from present time', () => {
     ages.dateOfBirthCalc()
     expect(ages.earthAge).toEqual(30);
@@ -101,8 +114,5 @@ describe('GalacticAges', () => {
   
 
 
-// test('should calculate and return the difference of this year and birthdate year', () => {
-  //   expect(ages.dateOfBirthCalc()).toEqual(31);
-  // }); from starting line 21
   
-  
+//I followed along with the Red, Green, Refactor workflow on https://www.learnhowtoprogram.com/intermediate-javascript/test-driven-development-and-environments-with-javascript/red-green-refactor-workflow; however, I think there's a discrepancy where I was suppose to commit a test before writing the corresponding method. I will admit now that I did not do that. I committed once I saw that my previous and current test passed per step 8.

@@ -52,5 +52,4 @@ export default class GalacticAges {
       this.jupiterExpectancy = Math.floor(this.jupiterAge - (averageExpectancy * this.jupiterUnit));
     }
   }
-  // create branch statement if they're over or under
 }

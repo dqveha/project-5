@@ -22,7 +22,7 @@ export default class GalacticAges {
   dateOfBirthCalc() {
     const today = new Date();
     let ageYear = today.getFullYear() - this.year;
-    const ageMonth = (today.getMonth() + 1) - this.month;
+    const ageMonth = today.getMonth() + 1 - this.month;
     if (ageMonth < 0 || (ageMonth === 0 && today.getDate() < this.day)) {
       ageYear--;
     }
@@ -39,17 +39,33 @@ export default class GalacticAges {
   lifeExpectancy() {
     const averageExpectancy = 72;
     if (this.earthAge <= averageExpectancy) {
-    this.earthExpectancy = (averageExpectancy - this.earthAge);
-    this.mercuryExpectancy = Math.floor((averageExpectancy * this.mercuryUnit) - this.mercuryAge);
-    this.venusExpectancy = Math.floor((averageExpectancy * this.venusUnit) - this.venusAge);
-    this.marsExpectancy = Math.floor((averageExpectancy * this.marsUnit) - this.marsAge);
-    this.jupiterExpectancy = Math.floor((averageExpectancy * this.jupiterUnit) - this.jupiterAge);
+      this.earthExpectancy = averageExpectancy - this.earthAge;
+      this.mercuryExpectancy = Math.floor(
+        averageExpectancy * this.mercuryUnit - this.mercuryAge
+      );
+      this.venusExpectancy = Math.floor(
+        averageExpectancy * this.venusUnit - this.venusAge
+      );
+      this.marsExpectancy = Math.floor(
+        averageExpectancy * this.marsUnit - this.marsAge
+      );
+      this.jupiterExpectancy = Math.floor(
+        averageExpectancy * this.jupiterUnit - this.jupiterAge
+      );
     } else {
-      this.earthExpectancy = (this.earthAge - averageExpectancy );
-      this.mercuryExpectancy = Math.floor(this.mercuryAge - (averageExpectancy * this.mercuryUnit));
-      this.venusExpectancy = Math.floor(this.venusAge - (averageExpectancy * this.venusUnit));
-      this.marsExpectancy = Math.floor(this.marsAge - (averageExpectancy * this.marsUnit));
-      this.jupiterExpectancy = Math.floor(this.jupiterAge - (averageExpectancy * this.jupiterUnit));
+      this.earthExpectancy = this.earthAge - averageExpectancy;
+      this.mercuryExpectancy = Math.floor(
+        this.mercuryAge - averageExpectancy * this.mercuryUnit
+      );
+      this.venusExpectancy = Math.floor(
+        this.venusAge - averageExpectancy * this.venusUnit
+      );
+      this.marsExpectancy = Math.floor(
+        this.marsAge - averageExpectancy * this.marsUnit
+      );
+      this.jupiterExpectancy = Math.floor(
+        this.jupiterAge - averageExpectancy * this.jupiterUnit
+      );
     }
   }
 }

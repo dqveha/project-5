@@ -1,7 +1,7 @@
 {
   "name": "Super Galactic Age Calculator",
   "version": "1.0.0",
-  "description": "---",
+  "description": "This is the fifth independent project assigned by Epicodus to assess the use of Jest, and working within environments. The purpose of the web application is to let the user input their date of birth, and have it output their age in Mercury, Venus, Earth, Mars, and Jupiter years. In addition, it will provide a life expectancy that will either show the user how much life expectancy they have left, or how many years they passed the average life expectancy.",
   "main": "src/main.js",
   "scripts": {
     "test": "jest --coverage",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dqveha/super-galactic-calc"
   },
   "author": "Dave Lindqvist",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/dqveha/super-galactic-calc#bugs"
   },
   "homepage": "",
   "devDependencies": {

@@ -22,7 +22,7 @@ export default class GalacticAges {
   dateOfBirthCalc() {
     const today = new Date();
     let ageYear = today.getFullYear() - this.year;
-    const ageMonth = today.getMonth() - this.month;
+    const ageMonth = (today.getMonth() + 1) - this.month;
     if (ageMonth < 0 || (ageMonth === 0 && today.getDate() < this.day)) {
       ageYear--;
     }

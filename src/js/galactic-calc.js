@@ -38,11 +38,13 @@ export default class GalacticAges {
 
   lifeExpectancy() {
     const averageExpectancy = 72;
+    if (this.earthAge <= averageExpectancy) {
     this.earthExpectancy = (averageExpectancy - this.earthAge);
     this.mercuryExpectancy = Math.floor((averageExpectancy * this.mercuryUnit) - this.mercuryAge);
     this.venusExpectancy = Math.floor((averageExpectancy * this.venusUnit) - this.venusAge);
     this.marsExpectancy = Math.floor((averageExpectancy * this.marsUnit) - this.marsAge);
-
+    this.jupiterExpectancy = Math.floor((averageExpectancy * this.jupiterUnit) - this.jupiterAge);
+    }
   }
   // create branch statement if they're over or under
 }

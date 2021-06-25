@@ -75,6 +75,20 @@ describe('GalacticAges', () => {
     ages.lifeExpectancy();
     expect(ages.marsExpectancy).toEqual(79);
   })
+
+  test('should return life expectancy on Jupiter', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    ages.lifeExpectancy();
+    expect(ages.jupiterExpectancy).toEqual(498);
+  })
+
+  test('should branch appropriately if current age is less than average average expectancy', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    ages.lifeExpectancy();
+    expect(ages.earthExpectancy).toEqual(42);
+  })
 });
   
 

@@ -22,4 +22,8 @@ export default class GalacticAges {
   mercuryAgeCalc() {
     this.mercuryAge = Math.floor(this.earthAge * 0.24)
   }
+
+  venusAgeCalc() {
+    this.venusAge = Math.floor(this.earthAge * 0.62)
+  }
 }

@@ -30,6 +30,12 @@ describe('GalacticAges', () => {
     ages.mercuryAgeCalc();
     expect(ages.mercuryAge).toEqual(7);
   });
+
+  test('should calculate and return age in Venus years', () => {
+    ages.dateOfBirthCalc();
+    ages.venusAgeCalc();
+    expect(ages.venusAge).toEqual(18);
+  });
 });
   
 

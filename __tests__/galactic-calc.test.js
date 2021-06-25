@@ -83,11 +83,19 @@ describe('GalacticAges', () => {
     expect(ages.jupiterExpectancy).toEqual(498);
   })
 
-  test('should branch appropriately if current age is less than average average expectancy', () => {
+  test('should branch appropriately if current age is less than average life expectancy', () => {
     ages.dateOfBirthCalc();
     ages.galacticAgeCalc();
     ages.lifeExpectancy();
     expect(ages.earthExpectancy).toEqual(42);
+  })
+
+  test('should branch appropriately if current age is older than average life expectancy and return years surpassed', () => {
+    let olderAges = new GalacticAges(1900, 1, 1) 
+    olderAges.dateOfBirthCalc();
+    olderAges.galacticAgeCalc();
+    olderAges.lifeExpectancy();
+    expect(olderAges.earthExpectancy).toEqual(49);
   })
 });
   

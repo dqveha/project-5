@@ -17,6 +17,10 @@ describe('GalacticAges', () => {
     expect(ages.venusAge).toEqual("");
     expect(ages.marsAge).toEqual("");
   });
+  
+  test('should calculate and return the difference of this year and birthdate year', () => {
+    expect(ages.dateOfBirthCalc()).toEqual(31);
+  });
 });
   
   

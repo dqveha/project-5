@@ -8,4 +8,10 @@ export default class GalacticAges {
     this.venusAge = "";
     this.marsAge = "";
   }
+
+  dateOfBirthCalc() {
+    const today = new Date();
+    const ageYear = today.getFullYear() - this.year;
+    return ageYear;
+  };
 }

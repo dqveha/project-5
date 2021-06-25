@@ -18,8 +18,13 @@ describe('GalacticAges', () => {
     expect(ages.marsAge).toEqual("");
   });
   
-  test('should calculate and return the difference of this year and birthdate year', () => {
-    expect(ages.dateOfBirthCalc()).toEqual(31);
+  // test('should calculate and return the difference of this year and birthdate year', () => {
+  //   expect(ages.dateOfBirthCalc()).toEqual(31);
+  // });
+
+  test('should calculate and return the year after calculating difference of month and day from present time', () => {
+    ages.dateOfBirthCalc()
+    expect(ages.earthAge).toEqual(30);
   });
 });
   

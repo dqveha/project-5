@@ -11,7 +11,11 @@ export default class GalacticAges {
 
   dateOfBirthCalc() {
     const today = new Date();
-    const ageYear = today.getFullYear() - this.year;
-    return ageYear;
+    let ageYear = today.getFullYear() - this.year;
+    const ageMonth = today.getMonth() - this.month;
+    if (ageMonth < 0 || (ageMonth === 0 && today.getDate() < this.day)) {
+      ageYear--;
+    }
+    this.earthAge = ageYear;
   };
 }

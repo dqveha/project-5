@@ -32,7 +32,34 @@ $(document).ready(function() {
     inputtedDOB.galacticAgeCalc();
     inputtedDOB.lifeExpectancy();
 
-    console.log(inputtedDOB);
-  
+    $('#mercury-years').html(inputtedDOB.mercuryAge);
+    $('#venus-years').html(inputtedDOB.venusAge);
+    $('#earth-years').html(inputtedDOB.earthAge);
+    $('#mars-years').html(inputtedDOB.marsAge);
+    $('#jupiter-years').html(inputtedDOB.jupiterAge);
+    $('#under-mercury-expectancy').html(inputtedDOB.mercuryExpectancy);
+    $('#under-venus-expectancy').html(inputtedDOB.mercuryExpectancy);
+    $('#under-earth-expectancy').html(inputtedDOB.earthExpectancy);
+    $('#under-mars-expectancy').html(inputtedDOB.marsExpectancy);
+    $('#under-jupiter-expectancy').html(inputtedDOB.jupiterExpectancy);
+    $('#over-mercury-expectancy').html(inputtedDOB.mercuryExpectancy);
+    $('#over-venus-expectancy').html(inputtedDOB.mercuryExpectancy);
+    $('#over-earth-expectancy').html(inputtedDOB.earthExpectancy);
+    $('#over-mars-expectancy').html(inputtedDOB.marsExpectancy);
+    $('#over-jupiter-expectancy').html(inputtedDOB.jupiterExpectancy);
+
+    
+    if (inputtedDOB.earthAge <= 72) {
+      $('ul').show();
+      $('#years-old').fadeIn();
+      $('#under-expectancy').show();
+      $('#over-expectancy').hide();
+    }
+    else {
+      $('ul').show();
+      $('#years-old').fadeIn();
+      $('#under-expectancy').hide();
+      $('#over-expectancy').show();
+    }
   })
 });

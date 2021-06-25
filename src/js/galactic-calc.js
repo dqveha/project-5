@@ -4,10 +4,15 @@ export default class GalacticAges {
     this.month = month;
     this.day = day;
     this.earthAge = "";
+    this.earthExpectancy = "";
     this.mercuryAge = "";
+    this.mercuryExpectancy = "";
     this.venusAge = "";
+    this.venusExpectancy = "";
     this.marsAge = "";
+    this.marsExpectancy = "";
     this.jupiterAge = "";
+    this.jupiterExpectancy = "";
     this.mercuryUnit = 0.24;
     this.venusUnit = 0.62;
     this.marsUnit = 1.88;
@@ -30,10 +35,10 @@ export default class GalacticAges {
     this.marsAge = Math.floor(this.earthAge * this.marsUnit);
     this.jupiterAge = Math.floor(this.earthAge * this.jupiterUnit);
   }
+
+  lifeExpectancy() {
+    const averageExpectancy = 72;
+    this.earthExpectancy = (averageExpectancy - this.earthAge);
+  }
+  // create branch statement if they're over or under
 }
-
-
-  // lifeExpectancy() {
-  //   const averageExpectancy = 72;
-
-  // }

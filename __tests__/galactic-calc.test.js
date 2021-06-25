@@ -68,6 +68,13 @@ describe('GalacticAges', () => {
     ages.lifeExpectancy();
     expect(ages.venusExpectancy).toEqual(26);
   })
+
+  test('should return life expectancy on Mars', () => {
+    ages.dateOfBirthCalc();
+    ages.galacticAgeCalc();
+    ages.lifeExpectancy();
+    expect(ages.marsExpectancy).toEqual(79);
+  })
 });
   
 

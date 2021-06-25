@@ -41,6 +41,8 @@ export default class GalacticAges {
     this.earthExpectancy = (averageExpectancy - this.earthAge);
     this.mercuryExpectancy = Math.floor((averageExpectancy * this.mercuryUnit) - this.mercuryAge);
     this.venusExpectancy = Math.floor((averageExpectancy * this.venusUnit) - this.venusAge);
+    this.marsExpectancy = Math.floor((averageExpectancy * this.marsUnit) - this.marsAge);
+
   }
   // create branch statement if they're over or under
 }

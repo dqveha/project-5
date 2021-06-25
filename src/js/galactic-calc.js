@@ -17,5 +17,9 @@ export default class GalacticAges {
       ageYear--;
     }
     this.earthAge = ageYear;
-  };
+  }
+
+  mercuryAgeCalc() {
+    this.mercuryAge = Math.floor(this.earthAge * 0.24)
+  }
 }

@@ -1,8 +1,24 @@
 img {
   height: auto;
   width: 100%;
+  border: 10px ridge gold;
+  margin-top: 1rem;
 }
 
 ul {
   display: none;
+  font-size: large;
 }
+
+form {
+  font-size: xx-large;
+}
+
+strong {
+  color: gold;
+}
+
+body {
+  background-color: black;
+  color: white;
+  background-image: url("https://media.giphy.com/media/aRZ4vTsHnyW6A/giphy.gif");

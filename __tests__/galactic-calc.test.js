@@ -33,8 +33,11 @@ describe('GalacticAges', () => {
   });
 
   test('should calculate and return the year after calculating difference of month and day from present time', () => {
-    ages.dateOfBirthCalc()
+    ages.dateOfBirthCalc();
     expect(ages.earthAge).toEqual(30);
+    let ages2 = new GalacticAges(1990, 6, 29);
+    ages2.dateOfBirthCalc();
+    expect(ages2.earthAge).toEqual(31);
   });
 
   test('should calculate and return age in Mercury years', () => {
